@@ -123,5 +123,40 @@ jupyter lab
 ```
 ### 16. Open jupyter lab on https://[your-domain]:8888
 
+### 17. Access without specifiying port
+Unspecified port in common web server are 80 (for http) and 443 (for https), commonly both port are restricted for non-root user. We can use authbind and enabling non-root user to access port 80 or 443.
+``` bash
+sudo apt-get install authbind
+sudo touch /eth/authbind/byport/80
+sudo touch /eth/authbind/byport/443
+sudo chmod 500 /eth/authbind/byport/80
+sudo chmod 500 /eth/authbind/byport/443
+sudo chown [username] /eth/authbind/byport/80
+sudo chown [username] /eth/authbind/byport/443
+```
+### 18. Change port number on config file
+``` bash
+nano ~/.jupyter/jupyter_notebook_config.py
+```
+
+Replace
+``` python
+c.NotebookApp.port = 8888
+```
+into
+``` python
+c.NotebookApp.port = 80
+```
+or
+``` python
+c.NotebookApp.port = 443
+```
+### 19. Run jupyter lab
+``` bash
+authbind --deep jupyter lab
+```
+
+### 20. Open jupyter lab on http://[your-domain] or https://[your-domain]
+
 ### Notes about Dataset uses in this repo
 The datasets used in this repo are credential data which accessed from BigQuery. Most of the data are already cleaned, denormalized and preprocessed using Google DataPrep in order to simplify the query processing. The credentials generated using service account on Google Cloud Platform.
