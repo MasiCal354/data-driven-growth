@@ -1,12 +1,12 @@
 # Data-Driven Growth Requirements Installation
 This is a quickstart of installing jupyter lab on Ubuntu 18.04 Server. For more detail on installation and configuration, [Here](https://jupyter-notebook.readthedocs.io/en/stable/index.html) is the documentation of Jupyter.
-### 1. Download Anaconda
+### 1. Download Miniconda
 ``` bash
-wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
-### 2. Install anaconda using bash command
+### 2. Install miniconda using bash command
 ``` bash
-bash Anaconda3-2019.10-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 ```
 ### 3. Follow Instruction (Just Yes to All)
 ### 4. Go to interactive bash (CTRL+D or run command below)
