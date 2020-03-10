@@ -127,12 +127,12 @@ jupyter lab
 Unspecified port in common web server are 80 (for http) and 443 (for https), commonly both port are restricted for non-root user. We can use authbind and enabling non-root user to access port 80 or 443.
 ``` bash
 sudo apt-get install authbind
-sudo touch /eth/authbind/byport/80
-sudo touch /eth/authbind/byport/443
-sudo chmod 500 /eth/authbind/byport/80
-sudo chmod 500 /eth/authbind/byport/443
-sudo chown [username] /eth/authbind/byport/80
-sudo chown [username] /eth/authbind/byport/443
+sudo touch /etc/authbind/byport/80
+sudo touch /etc/authbind/byport/443
+sudo chmod 500 /etc/authbind/byport/80
+sudo chmod 500 /etc/authbind/byport/443
+sudo chown [username] /etc/authbind/byport/80
+sudo chown [username] /etc/authbind/byport/443
 ```
 ### 18. Change port number on config file
 ``` bash
